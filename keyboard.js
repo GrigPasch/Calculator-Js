@@ -4,19 +4,19 @@ const taskButtons = ['+', '-', '*', '÷'];
 const decimalAdded = false;
 
 
-for(var i = 0; i < numericalValuesButtons.length; i++) {
+for(let i = 0; i < numericalValuesButtons.length; i++) {
   numericalValuesButtons[i].onclick = function(e) {
-		var input = document.querySelector('.outputPanel');
-		var inputVal = input.innerHTML;
-		var btnVal = this.innerHTML;
+		let input = document.querySelector('.outputPanel');
+		let inputVal = input.innerHTML;
+		let btnVal = this.innerHTML;
     
 		if(btnVal === 'C') {
 			input.innerHTML = '';
 			decimalAdded = false;
 		}
 		else if(btnVal === '=') {
-			var equation = inputVal; 
-			var lastChar = equation[equation.length - 1]; 
+			let equation = inputVal; 
+			let lastChar = equation[equation.length - 1]; 
      	
 			equation = equation.replace(/x/g, '*').replace(/÷/g, '/').replace(/\^/g, '\*\*');
 
@@ -27,7 +27,7 @@ for(var i = 0; i < numericalValuesButtons.length; i++) {
 			    decimalAdded = false;
 		}
 		else if(taskButtons.indexOf(btnVal) > -1) {
-			var lastChar = inputVal[inputVal.length - 1];
+			let lastChar = inputVal[inputVal.length - 1];
 
 			if(inputVal != '' && taskButtons.indexOf(lastChar) == -1) 
 				input.innerHTML += btnVal;
@@ -56,7 +56,7 @@ document.onkeydown = function(event){
 	let key_code = event.key;
 	let input = document.querySelector('.outputPanel');
 	let inputVal = input.innerHTML;
-	this.btnVal = this.innerHTML;
+	let btnVal = this.innerHTML;
     let lastChar = inputVal[inputVal.length - 1];
     let equation = inputVal;
 	equation = equation.replace(/x/g, '*').replace(/÷/g, '/').replace(/\^/g, '**');

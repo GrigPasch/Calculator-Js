@@ -15,6 +15,14 @@ body{
     background: linear-gradient(135deg, rgba(7,0,133,0.74) 5%, rgba(108,241,208,1) 50%, rgba(0,212,255,0.7354988399071926) 95%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#070085",endColorstr="#00d4ff",GradientType=1);
 }
+div.outputPanel{
+    border-radius: 25px 25px 25px 25px;
+}
+
+hr{
+    width: 485px;
+    position: fixed;
+}
 
 div.calcBody{
     display: grid;
@@ -29,6 +37,7 @@ div.calcBody > button{
     cursor: pointer;
     font-size: 2.5rem;
     border: 2px solid #000;
+    border-radius: 25px 25px 25px 25px;
     background-color: rgba(0, 0, 0, 0.25);
     color: rgba(255, 255, 255, 0.5);
 }
