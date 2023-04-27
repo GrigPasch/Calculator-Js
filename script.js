@@ -61,6 +61,7 @@ class Calculator{
         const integerDigits = parseFloat(stringNumber.split('.')[0]);
         const decimalDigits = stringNumber.split('.')[1];
         let numbersDisplay;
+
         if(isNaN(integerDigits)){
             numbersDisplay = '';
         }
